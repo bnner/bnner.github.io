@@ -1,0 +1,115 @@
+.follow {
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.follow main {
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    position: relative
+}
+
+.eyes,
+.eyes img {
+    position: absolute
+}
+
+.index {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ccc;
+}
+
+.index nav {
+    padding: 1rem;
+    background-color: #222;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburger-menu {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.ham-bar {
+    height: 4px;
+    width: 70%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .6s, top .6s;
+}
+
+.bar-top {
+    top: 25%;
+}
+
+.bar-bot {
+    top: 75%;
+}
+
+.hamburger-menu.active .bar-top {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+}
+
+.hamburger-menu.active .bar-mid {
+    transform: translate(-50%, -50%) rotate(-315deg);
+}
+
+.hamburger-menu.active .bar-bot {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+}
+
+.off-screen-menu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    background-color: #333;
+    height: 100vh;
+    width: 20%;
+    transition: top .5s;
+}
+
+.off-screen-menu.active {
+    top: 0;
+}
+
+.open-line {
+    width: 100vw;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blink {
+    animation: blink 2s steps(1, end) infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
